@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>The Unus Annus Archive</title>
+  </head>
+  <body>
+    <center>
+      <h1>The Unus Annus Archive</h1>
+      <hr>
+      <p>
+        <% for (var i = 0; i < seasonCount; i++) { %>
+          <% if (currentSeasonIndex === i) { %>
+            <b><a href="?season=<%= i.toString().padStart(2, "0") %>">Season <%= i.toString() %></a></b>
+          <% } else { %>
+            <a href="?season=<%= i.toString().padStart(2, "0") %>">Season <%= i.toString() %></a>
+          <% } %>
+        <% } %>
+      </p> 
+    </center>
+  </body>
+</html>

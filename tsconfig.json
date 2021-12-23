@@ -13,7 +13,8 @@
     "downlevelIteration": true,
     "lib": [
       "ES2015.Promise"
-    ]
+    ],
+    "outDir": "build"
   },
   "exclude": ["node_modules"]
 }
