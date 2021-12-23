@@ -1,0 +1,11 @@
+{
+  "name": "legacy",
+  "version": "1.0.0",
+  "main": "build/main.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^17.0.3",
+    "eslint": "^8.5.0",
+    "typescript": "^4.5.4"
+  }
+}
