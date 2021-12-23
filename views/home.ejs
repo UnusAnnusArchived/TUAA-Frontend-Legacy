@@ -4,6 +4,8 @@
     <title>The Unus Annus Archive</title>
   </head>
   <body>
+    <p>You are currently viewing the legacy version of this site. <a href="https://unusann.us">Click here</a> to go back to the normal site.</p>
+    <hr>
     <center>
       <h1>The Unus Annus Archive</h1>
       <hr>
@@ -15,7 +17,25 @@
             <a href="?season=<%= i.toString().padStart(2, "0") %>">Season <%= i.toString() %></a>
           <% } %>
         <% } %>
-      </p> 
+      </p>
+      
+      <hr>
+
+      <!-- Episodes -->
+      <table cellspacing="1" cellpadding="0" border="0" align="center" bgcolor="#000000">
+        <% for (var i = 0; i < episodes.length; i++) { %>
+          <tr bgcolor="#ffffff">
+            <td>
+              <center>
+                <a href="/watch/<%= `s${currentSeasonIndex.toString().padStart(2, "0")}.e${episodes[i].episode.toString().padStart(3, "0")}` %>">
+                  <img src="<%= episodes[i].posters?.[1]?.src ?? episodes[i].thumbnail %>" width="480" height="270"><br />
+                  <span><%= episodes[i].title %></span>
+                </a>
+              </center>
+            </td>
+          </tr>
+        <% } %>
+      </table>
     </center>
   </body>
 </html>
