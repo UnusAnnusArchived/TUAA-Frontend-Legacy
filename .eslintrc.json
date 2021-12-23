@@ -1,0 +1,23 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "quotes": ["error", "double", {
+          "allowTemplateLiterals": true,
+          "avoidEscape": true
+        }],
+        "semi": ["error", "always"],
+        "eol-last": ["error", "always"]
+      }
+}
