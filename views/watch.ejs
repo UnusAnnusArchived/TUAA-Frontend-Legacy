@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= episode.title %> | The Unus Annus Archive</title>
+  </head>
+  <body>
+    <p>You are currently viewing the legacy version of this site. <a href="https://unusann.us">Click here</a> to go back to the normal site.</p>
+    <hr>
+    <center>
+      <h1>The Unus Annus Archive</h1>
+      <hr />
+      <a href="/">Home</a>
+      <hr />
+
+      <video src="<%= videoUrl %>" controls width="1000px"></video><br />
+      <% if (episode.sources) { %>
+        <br />
+        <div style="width: 1000px; text-align: left;">
+          <form method="get">
+            <label for="resolution">Select resolution: </label>
+            <select id="resolution" name="res">
+              <% for (var i = 0; i < episode.sources.length; i++) { %>
+                <% if (episode.sources[i].size.toString() === resolution) { %>
+                  <option value="<%= episode.sources[i].size.toString() %>" selected><%= episode.sources[i].size.toString() %>p</option>
+                <% } else { %>
+                  <option value="<%= episode.sources[i].size.toString() %>"><%= episode.sources[i].size.toString() %>p</option>
+                <% } %>
+              <% } %>
+            </select>
+            <input type="submit" value="Change" />
+          </form>
+        </div>
+      <% } %>
+      <br />
+      <div style="width: 1000px; text-align: left;">
+          <h2><%= episode.title %></h2>
+          <hr>
+          <p><%- episode.description %></p>
+      </div>
+    </center>
+  </body>
+</html>
