@@ -4,7 +4,7 @@
     <title><%= episode.title %> | The Unus Annus Archive</title>
   </head>
   <body>
-    <p>You are currently viewing the legacy version of this site. <a href="https://unusann.us">Click here</a> to go back to the normal site.</p>
+    <p>You are currently viewing the legacy version of TUAA. <a href="https://unusann.us">Click here</a> to go back to the normal site.</p>
     <hr>
     <center>
       <h1>The Unus Annus Archive</h1>
@@ -12,7 +12,12 @@
       <a href="/">Home</a>
       <hr />
 
-      <video src="<%= videoUrl %>" controls width="1000px"></video><br />
+      <video src="<%= videoUrl %>" controls width="1000px">
+        <div style="width:1000px; border: 1px solid #000000;">
+          <p>Sadly your browser does not support HTML5 video. To watch this video, please open a network video streamer like VLC Player, and enter the following url:</p>
+          <p><code>https:<%= videoUrl %></code></p>
+        </div>
+      </video><br />
       <% if (episode.sources) { %>
         <br />
         <div style="width: 1000px; text-align: left;">
