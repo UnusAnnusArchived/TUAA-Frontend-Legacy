@@ -1,5 +1,6 @@
 import express from "express";
 import TUAA from "tuaa-api";
+import { resolve } from "path";
 
 const app = express();
 const tuaa = new TUAA();
@@ -20,6 +21,7 @@ app.get("/", async(req, res) => {
 app.get("/watch/:video", async(req, res) => {
   const watchCode = req.params.video;
   const episode = await tuaa.v2.metadata.episode(watchCode);
+  const comments = await tuaa.v2.comments.get(watchCode, 0, 1000);
   let resolution: string;
   let videoUrl: string;
 
@@ -66,8 +68,14 @@ app.get("/watch/:video", async(req, res) => {
   res.render("watch", {
     episode,
     resolution,
-    videoUrl
+    videoUrl,
+    comments,
+    isLoggedIn: false
   });
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(resolve(`${__dirname}/../errors/404.html`));
 });
 
 app.listen(4269);

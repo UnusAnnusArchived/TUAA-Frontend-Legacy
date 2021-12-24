@@ -41,6 +41,27 @@
           <h2><%= episode.title %></h2>
           <hr>
           <p><%- episode.description %></p>
+          <hr />
+          <div>
+            <h3>Comments</h3>
+            <% if (isLoggedIn) { %>
+              <form action="/submit-comment" method="post">
+                <input type="text" placeholder="Add a public comment">
+                <input type="submit" value="Comment">
+              </form>
+            <% } else { %>
+              <p>You need to login to comment on this video</p>
+            <% } %>
+
+            <% for (var i = 0; i < comments.length; i++) { %>
+              <table>
+                <tr>
+                  <td><img src="https://api.unusann.us<%= comments[i].user.pfp.filename %>"></td>
+                  <td>p</td>
+                </tr>
+              </table>
+            <% } %>
+          </div>
       </div>
     </center>
   </body>
