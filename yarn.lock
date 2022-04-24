@@ -995,6 +995,11 @@ minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
+moment@^2.29.1:
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -1288,7 +1293,7 @@ tsutils@^3.21.0:
   dependencies:
     tslib "^1.8.1"
 
-tuaa-api@2.0.1:
+tuaa-api@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/tuaa-api/-/tuaa-api-2.0.1.tgz#bf2b10f3c4700291f7458f507344b3b50d70ee7e"
   integrity sha512-DYGhtBv2Fi8SewhC1QJmGIH1Elk97tf++X9C6++Nn17p81uLd2yp+bwEUThGSoTs9otZsgxZoC6HB4UoGFvcfA==

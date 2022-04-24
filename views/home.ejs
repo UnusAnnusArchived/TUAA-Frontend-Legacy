@@ -32,7 +32,7 @@
                   <span><%= episodes[i].title %></span><br />
                   <br />
                 </a>
-                <span>Episode <%= episodes[i].episode.toString() %></span>
+                <span>Episode <%= episodes[i].episode.toString() %> - <%= moment(episodes[i].date ?? episodes[i].releasedate).format("DD. MMM YYYY") %></span>
               </center>
             </td>
           </tr>

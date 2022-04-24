@@ -11,9 +11,13 @@
     "eslint": "^8.5.0",
     "typescript": "^4.5.4"
   },
+  "scripts": {
+    "start": "npx tsc && node ."
+  },
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.2",
+    "moment": "^2.29.1",
     "tuaa-api": "^2.0.1"
   }
 }
