@@ -1293,10 +1293,10 @@ tsutils@^3.21.0:
   dependencies:
     tslib "^1.8.1"
 
-tuaa-api@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/tuaa-api/-/tuaa-api-2.0.1.tgz#bf2b10f3c4700291f7458f507344b3b50d70ee7e"
-  integrity sha512-DYGhtBv2Fi8SewhC1QJmGIH1Elk97tf++X9C6++Nn17p81uLd2yp+bwEUThGSoTs9otZsgxZoC6HB4UoGFvcfA==
+tuaa-api@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/tuaa-api/-/tuaa-api-2.0.2.tgz#b24a2272447c45bb8dd65c6dfff68c92f4abe8a0"
+  integrity sha512-GDRmgtuVvpmwPoLJexmNYffc1O7NcbomTEPmv18TZoMILKHBj18tAL5EuglQR0PFDOiSBWrI56Y7S2BfpNSUjA==
   dependencies:
     axios "^0.21.1"
     form-data "^4.0.0"
